@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -87,10 +87,10 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DynamicLocalizedLanguageInMVVM\DynamicLocalizedLanguageInMVVM.csproj">
-      <Project>{27083F54-4030-4951-9C7A-78EA5CC34E0F}</Project>
-      <Name>DynamicLocalizedLanguageInMVVM</Name>
+    <ProjectReference Include="..\DynamicLocalizedLanguageInMVVM\DynamicLocalization.csproj">
+      <Project>{99C73C06-21D8-472A-A6C0-29BF266C4025}</Project>
+      <Name>DynamicLocalization</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

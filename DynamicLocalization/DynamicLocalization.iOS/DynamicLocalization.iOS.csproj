@@ -128,9 +128,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\DynamicLocalizedLanguageInMVVM\DynamicLocalizedLanguageInMVVM.csproj">
-      <Project>{27083F54-4030-4951-9C7A-78EA5CC34E0F}</Project>
-      <Name>DynamicLocalizedLanguageInMVVM</Name>
+    <ProjectReference Include="..\DynamicLocalizedLanguageInMVVM\DynamicLocalization.csproj">
+      <Project>{99C73C06-21D8-472A-A6C0-29BF266C4025}</Project>
+      <Name>DynamicLocalization</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
