@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DynamicLocalizedLanguageInMVVM.Utilities
+﻿namespace DynamicLocalization.Utilities
 {
     internal static class Settings
     {

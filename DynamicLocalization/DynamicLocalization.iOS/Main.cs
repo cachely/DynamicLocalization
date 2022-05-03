@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace DynamicLocalizedLanguageInMVVM.iOS
+namespace DynamicLocalization.iOS
 {
     public class Application
     {

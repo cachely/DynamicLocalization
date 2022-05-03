@@ -1,10 +1,10 @@
 ﻿
 
-using DynamicLocalizedLanguageInMVVM.ViewModels;
-using DynamicLocalizedLanguageInMVVM.Views;
+using DynamicLocalization.ViewModels;
+using DynamicLocalization.Views;
 using Prism.Ioc;
 
-namespace DynamicLocalizedLanguageInMVVM
+namespace DynamicLocalization
 {
     public partial class App 
     {

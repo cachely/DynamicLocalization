@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Resources;
 
-namespace DynamicLocalizedLanguageInMVVM.Utilities
+namespace DynamicLocalization.Utilities
 {
     internal static class DynamicLocalizer
     {

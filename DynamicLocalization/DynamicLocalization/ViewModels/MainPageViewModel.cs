@@ -1,7 +1,8 @@
-﻿using Prism.Mvvm;
+﻿using DynamicLocalization.Utilities;
+using Prism.Mvvm;
 using Prism.Navigation;
 
-namespace DynamicLocalizedLanguageInMVVM.ViewModels
+namespace DynamicLocalization.ViewModels
 {
     internal class MainPageViewModel : BindableBase, INavigationAware
     {
@@ -40,8 +41,8 @@ namespace DynamicLocalizedLanguageInMVVM.ViewModels
 
         public void UpdateLocalizedItems()
         {
-            Greeting = 
-            
+            Greeting = DynamicLocalizer.GetText("Hello");
+            Instructions = DynamicLocalizer.GetText("Instructions");
         }
     }
 }
