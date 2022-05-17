@@ -1,6 +1,4 @@
-﻿
-
-using DynamicLocalization.ViewModels;
+﻿using DynamicLocalization.ViewModels;
 using DynamicLocalization.Views;
 using Prism.Ioc;
 

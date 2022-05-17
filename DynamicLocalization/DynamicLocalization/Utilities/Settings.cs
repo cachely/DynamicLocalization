@@ -2,6 +2,11 @@
 {
     internal static class Settings
     {
-        internal static string Culture = "en";
+        internal static string Culture { get; set; } = "en";
+
+        internal static void FlipCulture()
+        {
+            Culture = Culture.Equals("en") ? "es" : "en";
+        }
     }
 }

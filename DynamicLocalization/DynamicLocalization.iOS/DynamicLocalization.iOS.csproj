@@ -126,11 +126,11 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\DynamicLocalizedLanguageInMVVM\DynamicLocalization.csproj">
-      <Project>{99C73C06-21D8-472A-A6C0-29BF266C4025}</Project>
+    <ProjectReference Include="..\DynamicLocalization\DynamicLocalization.csproj">
+      <Project>{3a3fdc90-3581-4258-ae40-4e802600922d}</Project>
       <Name>DynamicLocalization</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
 ﻿using DynamicLocalization.Utilities;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace DynamicLocalization.ViewModels
 {
@@ -8,24 +9,25 @@ namespace DynamicLocalization.ViewModels
     {
         private string _greeting;
         private string _instructions;
+        private Command _updateCommand;
 
         public string Greeting
         {
             get => _greeting;
-            set
-            {
-                _greeting = value;
-                RaisePropertyChanged(nameof(Greeting));
-            }
+            set => SetProperty(ref _greeting, value, nameof(Greeting));
         }
 
         public string Instructions
         {
             get => _instructions;
-            set
+            set => SetProperty(ref _instructions, value, nameof(Instructions));
+        }
+
+        public Command UpdateCommand
+        {
+            get
             {
-                _instructions = value;
-                RaisePropertyChanged(nameof(Greeting));
+                return new Command(() => Settings.FlipCulture());
             }
         }
 
