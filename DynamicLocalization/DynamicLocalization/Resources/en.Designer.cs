@@ -72,9 +72,9 @@ namespace DynamicLocalization.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Go Back.
         /// </summary>
-        public static string Go_Back {
+        public static string GoBack {
             get {
-                return ResourceManager.GetString("Go Back", resourceCulture);
+                return ResourceManager.GetString("GoBack", resourceCulture);
             }
         }
         

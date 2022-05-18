@@ -16,21 +16,13 @@ namespace DynamicLocalization.ViewModels
         public string Dialog
         {
             get => _dialog;
-            set
-            {
-                _dialog = value;
-                RaisePropertyChanged(nameof(Dialog));
-            }
+            set => SetProperty(ref _dialog, value, nameof(Dialog));
         }
 
         public string GoBack
         {
             get => _goBack;
-            set
-            {
-                _goBack = value;
-                RaisePropertyChanged(nameof(GoBack));
-            }
+            set => SetProperty(ref _goBack, value, nameof(GoBack));
         }
 
         public Command NavigateBack
@@ -38,8 +30,15 @@ namespace DynamicLocalization.ViewModels
             get => new Command(() => NavigationService.GoBackAsync());
         }
 
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            UpdateLocalizedItems();
+        }
+
         protected override void UpdateLocalizedItems()
         {
+            base.UpdateLocalizedItems();
             Dialog = DynamicLocalizer.GetText("Dialog");
             GoBack = DynamicLocalizer.GetText("GoBack");
         }

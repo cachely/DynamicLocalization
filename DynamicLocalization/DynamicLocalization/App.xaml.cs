@@ -19,6 +19,7 @@ namespace DynamicLocalization
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<AnotherPage, AnotherPageViewModel>();
         }
 
         protected override void OnStart()

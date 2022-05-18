@@ -120,7 +120,7 @@
   <data name="Dialog" xml:space="preserve">
     <value>This is a page being displyed in english.</value>
   </data>
-  <data name="Go Back" xml:space="preserve">
+  <data name="GoBack" xml:space="preserve">
     <value>Go Back</value>
   </data>
   <data name="Hello" xml:space="preserve">

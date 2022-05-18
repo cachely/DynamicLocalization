@@ -17,7 +17,7 @@ namespace DynamicLocalization.ViewModels
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
         {
-           
+            MessagingCenter.Unsubscribe<object>(Application.Current, CultureChangedMessage.Message);
         }
 
         public virtual void OnNavigatedTo(INavigationParameters parameters)
@@ -27,9 +27,8 @@ namespace DynamicLocalization.ViewModels
 
         public virtual void Dispose()
         {
-            MessagingCenter.Unsubscribe<object>(Application.Current, CultureChangedMessage.Message);
+            
         }
-
 
         protected virtual void UpdateLocalizedItems()
         {

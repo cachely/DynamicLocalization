@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DynamicLocalization.Views.AnotherPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Dialog}" TextColor="Purple" LineBreakMode="WordWrap" />
-            <Button BackgroundColor="Black" Text="{Binding GoBack}" TextColor="Purple" Command="{Binding NavigateBack}" />
+        <StackLayout VerticalOptions="Center">
+            <Label Text="{Binding Dialog}" TextColor="Purple" LineBreakMode="WordWrap"  HorizontalOptions="Center"/>
+            <Button Text="{Binding GoBack}" TextColor="Purple" Command="{Binding NavigateBack}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
