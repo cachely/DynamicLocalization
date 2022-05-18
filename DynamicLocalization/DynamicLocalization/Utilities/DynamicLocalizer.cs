@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using System.Resources;
 
@@ -11,9 +13,19 @@ namespace DynamicLocalization.Utilities
             if (text == null)
                 return string.Empty;
 
-            var resMgr = new Lazy<ResourceManager>(() => new ResourceManager(Settings.Culture, typeof(DynamicLocalizer).GetTypeInfo().Assembly));        
-            return  resMgr.Value.GetString(text) ?? string.Empty;
+            try
+            {
+                //depending on how you name your resources, with or without a base name, you may have to reset your resource manager with each call.
+                var resMgr = new Lazy<ResourceManager>(() => new ResourceManager($"DynamicLocalization.Resources.{Settings.Culture}", typeof(DynamicLocalizer).GetTypeInfo().Assembly));
+                var value = resMgr.Value.GetString(text) ?? string.Empty;
+                return value;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);   
+            }
 
+            return String.Empty;
             //consider a default or a handler for empty strings
         }
     }

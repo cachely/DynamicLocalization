@@ -38,7 +38,7 @@ namespace DynamicLocalization.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            
+            UpdateLocalizedItems();
         }
 
         public void UpdateLocalizedItems()
