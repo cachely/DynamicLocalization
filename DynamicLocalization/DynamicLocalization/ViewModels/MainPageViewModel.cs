@@ -40,15 +40,15 @@ namespace DynamicLocalization.ViewModels
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
-            UpdateLocalizedItems();
             base.OnNavigatedTo(parameters);
+            UpdateLocalizedItems();
         }
 
         protected override void UpdateLocalizedItems()
         {
+            base.UpdateLocalizedItems();
             Greeting = DynamicLocalizer.GetText("Hello");
             Instructions = DynamicLocalizer.GetText("Instructions");
-            base.UpdateLocalizedItems();
         }
     }
 }

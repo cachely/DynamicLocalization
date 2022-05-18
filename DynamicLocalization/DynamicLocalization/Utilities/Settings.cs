@@ -10,7 +10,7 @@ namespace DynamicLocalization.Utilities
         internal static void FlipCulture()
         {
             Culture = Culture.Equals("en") ? "es" : "en";
-            MessagingCenter.Send(typeof(Settings).GetType(), null, new UpdateLocalizedItems());
+            MessagingCenter.Send<object>(Application.Current, CultureChangedMessage.Message);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DynamicLocalization.Utilities
 
             try
             {
-                //depending on how you name your resources, with or without a base name, you may have to reset your resource manager with each call.
+                //depending on how you handle your may have to reset your resource manager with each call.
                 var resMgr = new Lazy<ResourceManager>(() => new ResourceManager($"DynamicLocalization.Resources.{Settings.Culture}", typeof(DynamicLocalizer).GetTypeInfo().Assembly));
                 var value = resMgr.Value.GetString(text) ?? string.Empty;
                 return value;
