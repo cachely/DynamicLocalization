@@ -22,8 +22,7 @@ namespace DynamicLocalization.ViewModels
 
         public virtual void OnNavigatedTo(INavigationParameters parameters)
         {
-            MessagingCenter.Subscribe<UpdateLocalizedItems>(this, string.Empty, (args) => UpdateLocalizedItems());
-            UpdateLocalizedItems();
+            MessagingCenter.Subscribe<UpdateLocalizedItems>(this, null, (args) => UpdateLocalizedItems());
         }
 
         protected virtual void UpdateLocalizedItems()

@@ -1,4 +1,7 @@
-﻿namespace DynamicLocalization.Utilities
+﻿using DynamicLocalization.Messages;
+using Xamarin.Forms;
+
+namespace DynamicLocalization.Utilities
 {
     internal static class Settings
     {
@@ -7,6 +10,7 @@
         internal static void FlipCulture()
         {
             Culture = Culture.Equals("en") ? "es" : "en";
+            MessagingCenter.Send(typeof(Settings).GetType(), null, new UpdateLocalizedItems());
         }
     }
 }

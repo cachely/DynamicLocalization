@@ -1,5 +1,4 @@
 ﻿using DynamicLocalization.Utilities;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Xamarin.Forms;
 
